@@ -164,10 +164,12 @@ function saveScore(score) {
   if (highScore == "") {
     //     Save score for a year
     setCookie("highScore", highScore, 365);
+    console.log("Saved high score to cookies");
   }
   else if (score > highScore) {
     alert("Congrats! You set a new high score!")
     setCookie("highScore", highScore, 365);
+    console.log("Saved high score to cookies");
   }
   
 }
