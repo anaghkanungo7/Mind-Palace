@@ -212,16 +212,74 @@ button {
   border-radius: 10px;
 }
 
+.nameField {
+  width: 100%;
+  margin: 5px;
+}
+
 .row {
   display: flex;
+  padding: 
 }
 
 .column {
   flex: 50%;
+  margin: 5px;
 }
 
 .startBtn {
   width: 100%;
-  color: green;
-  font-weight: bold;
 }
+
+.stopBtn {
+  width: 100%;
+}
+
+#gameButtonArea > button {
+  width: 200px;
+  height: 200px;
+  margin: 2px;
+}
+
+.hidden {
+  display: none;
+}
+
+#button1 {
+  background: lightgreen;
+}
+
+
+
+#button1 {
+  background: lightgreen;
+}
+
+#button2 {
+  background: lightblue;
+}
+
+#button3 {
+  background: pink;
+}
+
+#button4 {
+  background: lightyellow;
+}
+
+#button1:active {
+  background:green
+}
+
+#button2:active {
+  background:blue
+}
+
+#button3:active {
+  background:red
+}
+
+#button4:active {
+  background:yellow
+}
+
