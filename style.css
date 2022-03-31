@@ -207,7 +207,21 @@ h2 {
   50% { border-color: #F8DA8D; }
 }
 
-.button {
-  padding: 10px;
+button {
+  padding: 20px;
+  border-radius: 10px;
 }
 
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+}
+
+.startBtn {
+  width: 100%;
+  color: green;
+  font-weight: bold;
+}

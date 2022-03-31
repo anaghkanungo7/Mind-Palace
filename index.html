@@ -59,23 +59,26 @@
         <!-- This is the start of content for our page -->
         <h2 class="title typewriter">Mind Palace</h2>
         
-        <div class="inputForm">
-          <label>What is your name? </label>
-          <input type="text" placeholder="Jake, Stacey, "
-        </div>
-        
         <div class="instructions">
           <p class=>
-            Hi <i>Player</i>, welcome to the game! You will be shown a pattern of colors... <br> <b> Repeat it to win the game!</b> Good luck :)
+            Hi, and welcome to Mind Palace! You will be shown a pattern of colors... <br> <b> Memorize and repeat the pattern  to win the game!</b> Good luck :)
           </p>
           
-          <button id="startBtn">
-            <b>Start</b> playing
-          </button>
           
-          <button id="stopBtn">
-            <b>Stop</b> playing
-          </button>
+          <div class="row">
+            <div class="column">
+              <input type="text" placeholder="Your beautiful name here">
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="column" style="width: 100%">
+               <button id="startBtn" class="startBtn">Start playing</button>
+            </div>
+            <div class="column">
+              <button id="stopBtn" class="stopBtn">Stop playing</button>
+            </div>
+          </div>
           
           <div id="gameButtonArea">
             <button id="button1"></button>
