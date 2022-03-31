@@ -33,9 +33,9 @@
 
     <div class="wrapper">
       <div class="content" role="main">
-        <h2 class="title typewriter">Mind Palace</h2>
-        
-        <div class="instructions main-content">
+        <h2 class="title typewriter" id="heading">Mind Palace</h2>
+        <div class="instructions" id="instructions">
+
           <p>
             Hi, and welcome to Mind Palace! You will be shown a pattern of colors... <br> <b> Memorize and repeat the pattern  to win the game!</b> Good luck :)
           </p>
@@ -49,16 +49,20 @@
 <!--                <button id="stopBtn" class="stopBtn hidden" onclick="stopGame()">Stop playing :(</button> -->
           </div>
           
-          <div id="gameButtonArea">
+        </div>
+        
+        <div class="scoreboard hidden" id="score">
+          <h3>Score: 0</h3>
+        </div>
+        
+        
+        <div id="gameButtonArea">
             <button id="button1" onmousedown="startTone(1)" onmouseup="stopTone()" onclick="guess(1)"></button>
             <button id="button2" onmousedown="startTone(2)" onmouseup="stopTone()" onclick="guess(2)"></button>
             <button id="button3" onmousedown="startTone(3)" onmouseup="stopTone()" onclick="guess(3)"></button>
             <button id="button4" onmousedown="startTone(4)" onmouseup="stopTone()" onclick="guess(4)"></button>
             
           </div>
-          
-        </div>
-        
         
       </div>
     </div>

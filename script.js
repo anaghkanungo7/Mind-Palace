@@ -25,8 +25,14 @@ const startGame = () => {
   
   //   Swap start and stop buttons
   document.getElementById("startBtn").classList.add("hidden");
-  document.getElementById("stopBtn").classList.remove("hidden");
-  document.getElementById("main-content").classList.add("hidden");
+  // document.getElementById("stopBtn").classList.remove("hidden");
+  document.getElementById("heading").classList.add("hidden");
+  document.getElementById("instructions").classList.add("hidden");
+  document.getElementById("score").classList.remove("hidden");
+
+
+
+
   playClueSequence();
 
 }
