@@ -170,7 +170,7 @@ input {
 
 /* Subheading */
 h2 {
-  color: #F9867F;
+  color: #white;
 /* Interactive image */
 .illustration:active {
   transform: translateY(5px);

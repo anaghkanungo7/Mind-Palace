@@ -2,10 +2,10 @@
 let pattern = [2, 2, 4, 3, 2, 1, 2, 4]
 let progress = 0;
 let gamePlaying = true;
-var tonePlaying = false;
-var volume = 0.5;  //must be between 0.0 and 1.0
-var guessCounter = 0;
-
+let tonePlaying = false;
+let volume = 0.5;  //must be between 0.0 and 1.0
+let guessCounter = 0;
+let score = 0;
 
 // Global Constants
 const clueHoldTime = 1000; //how long to hold each clue's light/sound
@@ -19,9 +19,6 @@ const startGame = () => {
   progress = 0;
   gamePlaying = true;
   
-  //   Fetch name
-  let name = document.getElementById('nameField').value;
-  
   
   //   Swap start and stop buttons
   document.getElementById("startBtn").classList.add("hidden");
@@ -30,9 +27,7 @@ const startGame = () => {
   document.getElementById("instructions").classList.add("hidden");
   document.getElementById("score").classList.remove("hidden");
 
-
-
-
+  
   playClueSequence();
 
 }
@@ -54,7 +49,7 @@ const freqMap = {
   3: 392,
   4: 466.2
 }
-function playTone(btn,len){ 
+const playTone = (btn,len) => { 
   o.frequency.value = freqMap[btn]
   g.gain.setTargetAtTime(volume,context.currentTime + 0.05,0.025)
   context.resume()
@@ -63,7 +58,7 @@ function playTone(btn,len){
     stopTone()
   },len)
 }
-function startTone(btn){
+const startTone = (btn) => {
   if(!tonePlaying){
     context.resume()
     o.frequency.value = freqMap[btn]
@@ -72,27 +67,27 @@ function startTone(btn){
     tonePlaying = true
   }
 }
-function stopTone(){
+const stopTone = () => {
   g.gain.setTargetAtTime(0,context.currentTime + 0.05,0.025)
   tonePlaying = false
 }
 
 // Page Initialization
 // Init Sound Synthesizer
-var AudioContext = window.AudioContext || window.webkitAudioContext 
-var context = new AudioContext()
-var o = context.createOscillator()
-var g = context.createGain()
+let AudioContext = window.AudioContext || window.webkitAudioContext 
+let context = new AudioContext()
+let o = context.createOscillator()
+let g = context.createGain()
 g.connect(context.destination)
 g.gain.setValueAtTime(0,context.currentTime)
 o.connect(g)
 o.start(0)
 
 
-function lightButton(btn){
+const lightButton = (btn) => {
   document.getElementById("button"+btn).classList.add("lit")
 }
-function clearButton(btn){
+const clearButton = (btn) => {
   document.getElementById("button"+btn).classList.remove("lit")
 }
 
@@ -124,10 +119,12 @@ function loseGame(){
 }
 
 
-function winGame(){
+function winGame(score){
   stopGame();
   alert("Congrats! You won the game :)");
+  updateScore(score);
 }
+
 
 function guess(btn){
   console.log("user guessed: " + btn);
@@ -137,9 +134,10 @@ function guess(btn){
   
   if (pattern[guessCounter] == btn) {
     //     Correct
+    score += 200; 
     if (guessCounter == progress) {
       if (progress == pattern.length - 1) {
-        winGame();
+        winGame(score);
       }
       else {
         progress++;
@@ -155,3 +153,46 @@ function guess(btn){
     loseGame();
   }
 }
+
+function updateScore(score) {
+  let highScore = getCookie("highScore")
+  if (highScore == "") {
+    //     Save score for a year
+    setCookie("highScore", highScore, 365);
+  }
+}
+
+// Functions for handling cookies
+// Sourced from: https://www.w3schools.com/js/js_cookies.asp
+function setCookie(cname, cvalue, exdays) {
+  const d = new Date();
+  d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+  let expires = "expires="+d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+  let name = cname + "=";
+  let ca = document.cookie.split(';');
+  for(let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+function checkCookies() {
+  let highScore = getCookie("highScore");
+  if (!(highScore == "")) {
+    //     We have a high score saved!
+    document.getElementById('highscore-paragraph').value = "Previous High Score: " + highScore;
+    
+  }
+}
+
+checkCookies();
