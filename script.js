@@ -114,15 +114,16 @@ function playClueSequence(){
 }
 
 function loseGame(){
-  stopGame();
   alert("Game Over. You lost.");
+  saveScore(score);
+  stopGame();
 }
 
 
 function winGame(score){
-  stopGame();
   alert("Congrats! You won the game :)");
-  updateScore(score);
+  saveScore(score);
+  stopGame();
 }
 
 
@@ -134,17 +135,21 @@ function guess(btn){
   
   if (pattern[guessCounter] == btn) {
     //     Correct
-    score += 200; 
     if (guessCounter == progress) {
       if (progress == pattern.length - 1) {
         winGame(score);
       }
       else {
         progress++;
+        console.log("Score is: " + score);
+        document.getElementById('live-score').innerHTML = score;
         playClueSequence();
       }
     }
     else {
+      //     Increment score
+      score += 200; 
+      document.getElementById('live-score').innerHTML = score;
       guessCounter++;
     }
   }
@@ -154,12 +159,17 @@ function guess(btn){
   }
 }
 
-function updateScore(score) {
+function saveScore(score) {
   let highScore = getCookie("highScore")
   if (highScore == "") {
     //     Save score for a year
     setCookie("highScore", highScore, 365);
   }
+  else if (score > highScore) {
+    alert("Congrats! You set a new high score!")
+    setCookie("highScore", highScore, 365);
+  }
+  
 }
 
 // Functions for handling cookies
@@ -191,7 +201,6 @@ function checkCookies() {
   if (!(highScore == "")) {
     //     We have a high score saved!
     document.getElementById('highscore-paragraph').value = "Previous High Score: " + highScore;
-    
   }
 }
 
