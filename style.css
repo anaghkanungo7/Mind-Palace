@@ -170,11 +170,11 @@ input {
 
 /* Subheading */
 h2 {
-  color: #F9867F;F9867F
-
+  color: #F9867F;
 /* Interactive image */
 .illustration:active {
   transform: translateY(5px);
+  }
 }
 
 /* Button dip
@@ -184,3 +184,30 @@ h2 {
 .dipped {
   transform: translateY(5px);
 }
+
+/* Typewriter animation   */
+.typewriter {
+  overflow: hidden; 
+  border-right: .15em solid #F8DA8D; 
+  white-space: nowrap; 
+  margin: 0 auto; 
+  letter-spacing: .075em; 
+   animation: 
+    typing 1.5s steps(40, end),
+    blink-caret .6s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #F8DA8D; }
+}
+
+.button {
+  padding: 10px;
+}
+

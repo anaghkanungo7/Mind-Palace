@@ -16,13 +16,13 @@
       You can write text in a comment and the content won't be visible in the page
     -->
 
-    <title>Hello World!</title>
+    <title>Mind Palace memory game</title>
 
     <!-- Meta tags for SEO and social sharing -->
     <link rel="canonical" href="https://glitch-hello-website.glitch.me/" />
     <meta
       name="description"
-      content="A simple website, built with Glitch. Remix it to get your own."
+      content="Mind Palace, a fun memory game."
     />
     <meta name="robots" content="index,follow" />
     <meta property="og:title" content="Hello World!" />
@@ -30,7 +30,7 @@
     <meta property="og:url" content="https://glitch-hello-website.glitch.me/" />
     <meta
       property="og:description"
-      content="A simple website, built with Glitch. Remix it to get your own."
+      content="Mind Palace, a fun memory game."
     />
     <meta
       property="og:image"
@@ -43,9 +43,6 @@
 
     <!-- Import the webpage's javascript file -->
     <script src="/script.js" defer></script>
-    <script>
-    let name = input("Enter your name? ");
-    </script>
   </head>
   <body>
     <!--
@@ -60,10 +57,15 @@
     <div class="wrapper">
       <div class="content" role="main">
         <!-- This is the start of content for our page -->
-        <h2 class="title">Mind Map</h2>
+        <h2 class="title typewriter">Mind Palace</h2>
+        
+        <div class="inputForm">
+          <label>What is your name? </label>
+          <input type="text" placeholder="Jake, Stacey, "
+        </div>
         
         <div class="instructions">
-          <p>
+          <p class=>
             Hi <i>Player</i>, welcome to the game! You will be shown a pattern of colors... <br> <b> Repeat it to win the game!</b> Good luck :)
           </p>
           
@@ -86,8 +88,6 @@
         </div>
       </div>
     </div>
-    <footer class="footer">
-     
-    </footer>
+    
   </body>
 </html>
