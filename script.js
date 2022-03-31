@@ -38,11 +38,12 @@ const startGame = () => {
 }
 
 const stopGame = () => {
-  let gamePlaying = false;
+//   let gamePlaying = false;
   
-  //   Swap start and stop buttons
-  document.getElementById("stopBtn").classList.add("hidden");
-  document.getElementById("startBtn").classList.remove("hidden");
+//   //   Swap start and stop buttons
+//   // document.getElementById("stopBtn").classList.add("hidden");
+//   document.getElementById("startBtn").classList.remove("hidden");
+  document.location.reload();
 }
 
 
