@@ -43,6 +43,9 @@
 
     <!-- Import the webpage's javascript file -->
     <script src="/script.js" defer></script>
+    <script>
+    let name = input("Enter your name? ");
+    </script>
   </head>
   <body>
     <!--
@@ -57,13 +60,28 @@
     <div class="wrapper">
       <div class="content" role="main">
         <!-- This is the start of content for our page -->
-        <h1 class="title">Hello World!</h1>
+        <h2 class="title">Mind Map</h2>
         
         <div class="instructions">
-          <h2>Using this project</h2>
           <p>
-            Hi Player, welcome to the game! <b> Repeat the pattern back to win the game!</b>
+            Hi <i>Player</i>, welcome to the game! You will be shown a pattern of colors... <br> <b> Repeat it to win the game!</b> Good luck :)
           </p>
+          
+          <button id="startBtn">
+            <b>Start</b> playing
+          </button>
+          
+          <button id="stopBtn">
+            <b>Stop</b> playing
+          </button>
+          
+          <div id="gameButtonArea">
+            <button id="button1"></button>
+            <button id="button2"></button>
+            <button id="button3"></button>
+            <button id="button4"></button>
+            
+          </div>
           
         </div>
       </div>
