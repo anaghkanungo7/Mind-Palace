@@ -71,18 +71,18 @@
           
           <div class="row">
             <div class="column">
-               <button id="startBtn" class="startBtn" onclick="()">Start playing :)</button>
+               <button id="startBtn" class="startBtn" onclick="startGame()">Start playing :)</button>
             </div>
             <div class="column">
-              <button id="stopBtn" class="stopBtn hidden">Stop playing :(</button>
+              <button id="stopBtn" class="stopBtn hidden" onclick="stopGame()">Stop playing :(</button>
             </div>
           </div>
           
           <div id="gameButtonArea">
-            <button id="button1"></button>
-            <button id="button2"></button>
-            <button id="button3"></button>
-            <button id="button4"></button>
+            <button id="button1" onmousedown="startTone(1)" onmouseup="stopTone()" onclick="guess(1)"></button>
+            <button id="button2" onmousedown="startTone(2)" onmouseup="stopTone()" onclick="guess(2)"></button>
+            <button id="button3" onmousedown="startTone(3)" onmouseup="stopTone()" onclick="guess(3)"></button>
+            <button id="button4" onmousedown="startTone(4)" onmouseup="stopTone()" onclick="guess(4)"></button>
             
           </div>
           

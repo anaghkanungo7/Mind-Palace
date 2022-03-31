@@ -267,19 +267,19 @@ button {
   background: lightyellow;
 }
 
-#button1:active {
-  background:green
+#button1:active, #button1.lit {
+  background:green;
 }
 
-#button2:active {
-  background:blue
+#button2:active, #button2.lit {
+  background:blue;
 }
 
-#button3:active {
-  background:red
+#button3:active, #button3.lit {
+  background:red;
 }
 
-#button4:active {
-  background:yellow
+#button4:active, #button4.lit {
+  background:yellow;
 }
 
