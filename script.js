@@ -92,7 +92,7 @@ const clearButton = (btn) => {
 }
 
 
-function playSingleClue(btn){
+const playSingleClue = (btn) => {
   if(gamePlaying){
     lightButton(btn);
     playTone(btn,clueHoldTime);
@@ -101,7 +101,7 @@ function playSingleClue(btn){
 }
 
 
-function playClueSequence(){
+const playClueSequence = () => {
   guessCounter = 0;
   context.resume()
   let delay = nextClueWaitTime; //set delay to initial wait time
@@ -113,21 +113,21 @@ function playClueSequence(){
   }
 }
 
-function loseGame(){
+const loseGame = () => {
   alert("Game Over. You lost.");
   saveScore(score);
   stopGame();
 }
 
 
-function winGame(score){
+const winGame = (score) => {
   alert("Congrats! You won the game :)");
   saveScore(score);
   stopGame();
 }
 
 
-function guess(btn){
+const guess = (btn) => {
   console.log("user guessed: " + btn);
   if(!gamePlaying){
     return;
@@ -159,7 +159,7 @@ function guess(btn){
   }
 }
 
-function saveScore(score) {
+const saveScore = (score) => {
   let highScore = getCookie("highScore")
   if (highScore == "") {
     //     Save score for a year
@@ -176,14 +176,14 @@ function saveScore(score) {
 
 // Functions for handling cookies
 // Sourced from: https://www.w3schools.com/js/js_cookies.asp
-function setCookie(cname, cvalue, exdays) {
+const setCookie = (cname, cvalue, exdays) => {
   const d = new Date();
   d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
   let expires = "expires="+d.toUTCString();
   document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
 
-function getCookie(cname) {
+const getCookie = (cname) => {
   let name = cname + "=";
   let ca = document.cookie.split(';');
   for(let i = 0; i < ca.length; i++) {
