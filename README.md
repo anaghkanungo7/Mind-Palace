@@ -7,7 +7,7 @@ Submitted by: **Anagh Kanungo**
 Time spent: **5** hours spent in total
 
 Link to project: [Glitch Project Link](https://glitch.com/edit/#!/expensive-chartreuse-sardine?path=README.md%3A7%3A15)
-Playable Link
+Playable Link: (https://expensive-chartreuse-sardine.glitch.me)
 
 ## Required Functionality
 
@@ -42,13 +42,16 @@ The following **additional** features are implemented:
 ## Video Walkthrough (GIF)
 
 If you recorded multiple GIFs for all the implemented features, you can add them here:
-![](gif1-link-here)
+[Imgur Link](https://imgur.com/a/tPMxYbu) \
+[Direct Video Embed](https://i.imgur.com/UBPbjLs.mp4)
 
 ## Reflection Questions
 1. If you used any outside resources to help complete your submission (websites, books, people, etc) list them here. 
 - Functions for Cookies: https://www.w3schools.com/js/js_cookies.asp
 
-2. What was a challenge you encountered in creating this submission (be specific)? How did you overcome it? (recommended 200 - 400 words) 
+2. What was a challenge you encountered in creating this submission (be specific)? How did you overcome it? (recommended 200 - 400 words)
+
+
 While creating this website, I encountered three main problems. I will discuss them in detail. 
 - The first problem I encountered was with generating sound on the webpage. Since I've not worked with generating audio in Javascript before, it took some time for me to figure out how the function was working and how it was generating audio. Initially, I could not hear a different audio on all of the buttons, which I resolved by fixing a typo in my code. 
 - The second problem was related to generating a random pattern, which was one of the optional exercises. To make the game more interesting, I decided to create a function that would generate a random pattern every time the page was loaded. Although I've worked with Math.random() before, it was interesting to try and figure out a way to generate numbers within a specific range and I figured it out in the end by using Math.floor and an array to pick elements from. I'm sure there's a more optimized way to do this, but for now this worked well.
@@ -56,12 +59,16 @@ While creating this website, I encountered three main problems. I will discuss t
 
 
 3. What questions about web development do you have after completing your submission? (recommended 100 - 300 words) 
+
+
 This project was an interesting experience for me and a way to practice some of the web development skills that I've learnt over the years, as well as working with Glitch for the first time, which was a really good experience as well. 
 Completing this has raised some interesting questions about web development, and I hope I can learn more when I attend the SITE internship program. 
 - How can we make this website mobile responsive, so that it works well on all orientations. Specifically, on mobile maybe we could have smaller buttons and elements?
 - How can we create a variety of sounds natively in Javascript, and use them in our game? It is great that we can generate sound using just code without any external libraries. I wonder what types of sounds we can generate, and how these are used in real-life applications.
 
 4. If you had a few more hours to work on this project, what would you spend them doing (for example: refactoring certain functions, adding additional features, etc). Be specific. (recommended 100 - 300 words) 
+
+
 If I had more time and resources to devote to this project, here are the features I would like to implement:
 - Setup a backend in this game, which people can sign-in. It also auto-generates a new pattern every 24 hours for people to play.
 - People can log their high scores on a leaderboard which resets every 24 hours and can get featured there. This would help create a community around this game, like the popular game Wordle. 
@@ -78,7 +85,7 @@ If I had more time and resources to devote to this project, here are the feature
 
 ## License
 
-    Copyright [YOUR NAME]
+    Copyright Anagh Kanungo
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
