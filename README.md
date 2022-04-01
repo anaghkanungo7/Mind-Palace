@@ -7,6 +7,7 @@ Submitted by: **Anagh Kanungo**
 Time spent: **5** hours spent in total
 
 Link to project: [Glitch Project Link](https://glitch.com/edit/#!/expensive-chartreuse-sardine?path=README.md%3A7%3A15)
+Playable Link
 
 ## Required Functionality
 
@@ -55,16 +56,24 @@ While creating this website, I encountered three main problems. I will discuss t
 
 
 3. What questions about web development do you have after completing your submission? (recommended 100 - 300 words) 
-[YOUR ANSWER HERE]
+This project was an interesting experience for me and a way to practice some of the web development skills that I've learnt over the years, as well as working with Glitch for the first time, which was a really good experience as well. 
+Completing this has raised some interesting questions about web development, and I hope I can learn more when I attend the SITE internship program. 
+- How can we make this website mobile responsive, so that it works well on all orientations. Specifically, on mobile maybe we could have smaller buttons and elements?
+- How can we create a variety of sounds natively in Javascript, and use them in our game? It is great that we can generate sound using just code without any external libraries. I wonder what types of sounds we can generate, and how these are used in real-life applications.
 
 4. If you had a few more hours to work on this project, what would you spend them doing (for example: refactoring certain functions, adding additional features, etc). Be specific. (recommended 100 - 300 words) 
-[YOUR ANSWER HERE]
-
+If I had more time and resources to devote to this project, here are the features I would like to implement:
+- Setup a backend in this game, which people can sign-in. It also auto-generates a new pattern every 24 hours for people to play.
+- People can log their high scores on a leaderboard which resets every 24 hours and can get featured there. This would help create a community around this game, like the popular game Wordle. 
+- Maybe add a function to increase the number of buttons as the difficulty level increases. This would require some modifications to ensure that buttons stay hidden until a certain level, and also that the pattern is valid at all times for the buttons that are shown. 
+- Definitely add different sound effects to the game.
+- Add a running clock to the game, which also speeds up with every passing level. 
+- Make the buttons move on higher levels, making it even harder for the player to click as they keep moving around randomly in a box.
 
 
 ## Interview Recording URL Link
 
-[My 5-minute Interview Recording](your-link-here)
+[My 5-minute Interview Recording](https://youtu.be/8A9__MIn1IY)
 
 
 ## License
