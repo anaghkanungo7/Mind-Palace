@@ -247,23 +247,23 @@ button {
 
 #button1 {
   background: url("https://cdn.glitch.global/582b5d6d-0747-4267-8936-1a10ef7faf5a/1.jpeg?v=1648776122834");
-  background-size: cover;
+  background-size: 250px 250px;
 }
 
 
 #button2 {
   background: url("https://cdn.glitch.global/582b5d6d-0747-4267-8936-1a10ef7faf5a/2.jpg?v=1648776125015");
-  background-size: cover;
+  background-size: 250px 250px;
 }
 
 #button3 {
   background: url("https://cdn.glitch.global/582b5d6d-0747-4267-8936-1a10ef7faf5a/3.jpg?v=1648776128048");
-  background-size: cover;
+  background-size: 250px 250px;
 }
 
 #button4 {
   background: url("https://cdn.glitch.global/582b5d6d-0747-4267-8936-1a10ef7faf5a/4.jpg?v=1648776129491");
-  background-size: cover;
+  background-size: 250px 250px;
 }
 
 #button1:active, #button1.lit {

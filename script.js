@@ -1,7 +1,8 @@
 // Global Variables
-let pattern = [2, 2, 4, 3, 2, 1, 2, 4]
+let pattern = Array.from({length: 10}, () => Math.floor(Math.random() * 5));
+
 let progress = 0;
-let gamePlaying = true;
+let gamePlaying = false;
 let tonePlaying = false;
 let volume = 0.5;  //must be between 0.0 and 1.0
 let guessCounter = 0;
