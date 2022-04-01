@@ -246,29 +246,28 @@ button {
 }
 
 #button1 {
-  background: lightgreen;
+  background: url("https://cdn.glitch.global/582b5d6d-0747-4267-8936-1a10ef7faf5a/1.jpeg?v=1648776122834");
+  background-size: cover;
 }
 
-
-
-#button1 {
-  background: lightgreen;
-}
 
 #button2 {
-  background: lightblue;
+  background: url("https://cdn.glitch.global/582b5d6d-0747-4267-8936-1a10ef7faf5a/2.jpg?v=1648776125015");
+  background-size: cover;
 }
 
 #button3 {
-  background: pink;
+  background: url("https://cdn.glitch.global/582b5d6d-0747-4267-8936-1a10ef7faf5a/3.jpg?v=1648776128048");
+  background-size: cover;
 }
 
 #button4 {
-  background: lightyellow;
+  background: url("https://cdn.glitch.global/582b5d6d-0747-4267-8936-1a10ef7faf5a/4.jpg?v=1648776129491");
+  background-size: cover;
 }
 
 #button1:active, #button1.lit {
-  background:green;
+  background:purple;
 }
 
 #button2:active, #button2.lit {
@@ -276,15 +275,11 @@ button {
 }
 
 #button3:active, #button3.lit {
-  background:red;
-}
-
-#button4:active, #button4.lit {
   background:yellow;
 }
 
-.enlarged-button {
-  scale
+#button4:active, #button4.lit {
+  background:red;
 }
 
 
