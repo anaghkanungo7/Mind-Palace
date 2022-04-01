@@ -1,6 +1,4 @@
 // Global Variables
-let pattern = Array.from({length: 10}, () => Math.floor(Math.random() * 5));
-
 let progress = 0;
 let gamePlaying = false;
 let tonePlaying = false;
@@ -18,7 +16,18 @@ const cluePauseTime = 333; //how long to pause in between clues
 const nextClueWaitTime = 1000; //how long to wait before starting playback of the clue sequence
 
 
+const generatePattern = () => {
+  let pattern = [0, 0, 0];
+  var buttons = [1, 2, 3, 4];
+  for (let x = 0; x < 10; x++) {
+      var randValue = buttons[Math.floor(Math.random() * buttons.length)];
+      pattern[x] = randValue;
+  }
+  
+  return pattern;
+}
 
+let pattern = generatePattern();
 
 const startGame = () => {
   progress = 0;
@@ -164,7 +173,7 @@ const guess = (btn) => {
     else {
       //     Increment score
       score += (100 * scoreMultiplier); 
-      document.getElementById('live-score').innerHTML = level;
+      document.getElementById('live-score').innerHTML = score;
       guessCounter++;
     }
   }
