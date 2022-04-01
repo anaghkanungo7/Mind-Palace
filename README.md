@@ -48,7 +48,10 @@ If you recorded multiple GIFs for all the implemented features, you can add them
 - Functions for Cookies: https://www.w3schools.com/js/js_cookies.asp
 
 2. What was a challenge you encountered in creating this submission (be specific)? How did you overcome it? (recommended 200 - 400 words) 
-- The 
+While creating this website, I encountered three main problems. I will discuss them in detail. 
+- The first problem I encountered was with generating sound on the webpage. Since I've not worked with generating audio in Javascript before, it took some time for me to figure out how the function was working and how it was generating audio. Initially, I could not hear a different audio on all of the buttons, which I resolved by fixing a typo in my code. 
+- The second problem was related to generating a random pattern, which was one of the optional exercises. To make the game more interesting, I decided to create a function that would generate a random pattern every time the page was loaded. Although I've worked with Math.random() before, it was interesting to try and figure out a way to generate numbers within a specific range and I figured it out in the end by using Math.floor and an array to pick elements from. I'm sure there's a more optimized way to do this, but for now this worked well.
+- The third problem was related to saving the high score of the game for the user. Since we don't really have a back-end server setup, the easiest way to setup data persistence was to use browser cookies. We could have also used sessions, but that would reset after every browsing session, something I didn't want. I knew about the document.cookies object but I had to look it up on W3Schools and used their functions as they seemed to do exactly what I wanted. 
 
 
 3. What questions about web development do you have after completing your submission? (recommended 100 - 300 words) 
