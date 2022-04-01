@@ -165,7 +165,10 @@ const guess = (btn) => {
 
         
         //         Make the game faster
-        clueHoldTime -= (140 * scoreMultiplier);
+        if (clueHoldTime > 250) {
+          clueHoldTime -= 150;
+        }
+        
         
         playClueSequence();
       }
