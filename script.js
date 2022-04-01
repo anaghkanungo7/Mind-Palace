@@ -8,8 +8,10 @@ let guessCounter = 0;
 let score = 0;
 let scoreMultiplier = 1;
 
+// Make it faster after each level
+let clueHoldTime = 1000; //how long to hold each clue's light/sound
+
 // Global Constants
-const clueHoldTime = 1000; //how long to hold each clue's light/sound
 const cluePauseTime = 333; //how long to pause in between clues
 const nextClueWaitTime = 1000; //how long to wait before starting playback of the clue sequence
 
@@ -142,10 +144,17 @@ const guess = (btn) => {
       }
       else {
         score += (150 * scoreMultiplier); 
-        scoreMultiplier = (scoreMultiplier + 
+        scoreMultiplier += 0.2;
         progress++;
-        console.log("Score is: " + score);
+        console.log("Level completed! Score is: " + score);
         document.getElementById('live-score').innerHTML = score;
+        document.getElementById('live-score').innerHTML = score;
+
+
+        
+        //         Make the game faster
+        clueHoldTime -= (100 * scoreMultiplier);
+        
         playClueSequence();
       }
     }
@@ -166,12 +175,12 @@ const saveScore = (score) => {
   let highScore = getCookie("highScore")
   if (highScore == "") {
     //     Save score for a year
-    setCookie("highScore", highScore, 365);
+    setCookie("highScore", score, 365);
     console.log("Saved high score to cookies");
   }
   else if (score > highScore) {
     alert("Congrats! You set a new high score!")
-    setCookie("highScore", highScore, 365);
+    setCookie("highScore", score, 365);
     console.log("Saved high score to cookies");
   }
   
@@ -205,7 +214,7 @@ function checkCookies() {
   let highScore = getCookie("highScore");
   if (!(highScore == "")) {
     //     We have a high score saved!
-    document.getElementById('highscore-paragraph').value = "Previous High Score: " + highScore;
+    document.getElementById('highscore-paragraph').innerHTML = "Saved High Score: " + highScore + ". Let's see if you can beat it :)";
   }
 }
 
