@@ -6,6 +6,7 @@ let tonePlaying = false;
 let volume = 0.5;  //must be between 0.0 and 1.0
 let guessCounter = 0;
 let score = 0;
+let scoreMultiplier = 1;
 
 // Global Constants
 const clueHoldTime = 1000; //how long to hold each clue's light/sound
@@ -22,7 +23,7 @@ const startGame = () => {
   
   //   Swap start and stop buttons
   document.getElementById("startBtn").classList.add("hidden");
-  // document.getElementById("stopBtn").classList.remove("hidden");
+  document.getElementById("stopBtn").classList.remove("hidden");
   document.getElementById("heading").classList.add("hidden");
   document.getElementById("instructions").classList.add("hidden");
   document.getElementById("score").classList.remove("hidden");
@@ -37,7 +38,7 @@ const stopGame = () => {
   
 //   //   Swap start and stop buttons
 //   // document.getElementById("stopBtn").classList.add("hidden");
-//   document.getElementById("startBtn").classList.remove("hidden");
+  // document.getElementById("startBtn").classList.remove("hidden");
   document.location.reload();
 }
 
@@ -140,6 +141,8 @@ const guess = (btn) => {
         winGame(score);
       }
       else {
+        score += (150 * scoreMultiplier); 
+        scoreMultiplier = (scoreMultiplier + 
         progress++;
         console.log("Score is: " + score);
         document.getElementById('live-score').innerHTML = score;
@@ -148,7 +151,7 @@ const guess = (btn) => {
     }
     else {
       //     Increment score
-      score += 200; 
+      score += (100 * scoreMultiplier); 
       document.getElementById('live-score').innerHTML = score;
       guessCounter++;
     }

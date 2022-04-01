@@ -42,7 +42,6 @@
           
           <div class="row">
                <button id="startBtn" class="startBtn" onclick="startGame()">Start playing :)</button>
-<!--                <button id="stopBtn" class="stopBtn hidden" onclick="stopGame()">Stop playing :(</button> -->
           </div>
           
         </div>
@@ -50,8 +49,12 @@
         <div class="scoreboard hidden" id="score">
           <h2> Score:</h2> <h2 id="live-score"> 0 </h2>
         </div>
+        
         <br>
         
+        <div class="row">
+          <button id="stopBtn" class="stopBtn hidden" onclick="stopGame()">Stop playing :(</button>
+        </div>
         
         <div id="gameButtonArea">
             <button id="button1" onmousedown="startTone(1)" onmouseup="stopTone()" onclick="guess(1)"></button>
