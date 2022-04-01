@@ -7,6 +7,7 @@ let volume = 0.5;  //must be between 0.0 and 1.0
 let guessCounter = 0;
 let score = 0;
 let scoreMultiplier = 1;
+let level = 1;
 
 // Make it faster after each level
 let clueHoldTime = 1000; //how long to hold each clue's light/sound
@@ -148,12 +149,13 @@ const guess = (btn) => {
         progress++;
         console.log("Level completed! Score is: " + score);
         document.getElementById('live-score').innerHTML = score;
-        document.getElementById('live-score').innerHTML = score;
+        level += 1;
+        document.getElementById('live-level').innerHTML = level;
 
 
         
         //         Make the game faster
-        clueHoldTime -= (100 * scoreMultiplier);
+        clueHoldTime -= (140 * scoreMultiplier);
         
         playClueSequence();
       }
@@ -161,7 +163,7 @@ const guess = (btn) => {
     else {
       //     Increment score
       score += (100 * scoreMultiplier); 
-      document.getElementById('live-score').innerHTML = score;
+      document.getElementById('live-score').innerHTML = level;
       guessCounter++;
     }
   }
